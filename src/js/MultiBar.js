@@ -17,8 +17,8 @@ class MultiBar extends Component {
   render() {
     return (
       <div className="multibar">
-        {this.props.values.map((bar) => (
-            <SingleBar left={{color: bar.left.color, value: bar.left.value }} right={{ color: bar.right.color, value: bar.right.value }} title={bar.title}/>
+        {this.props.values.map((bar, index) => (
+            <SingleBar key={index} left={{color: bar.left.color, value: bar.left.value }} right={{ color: bar.right.color, value: bar.right.value }} title={bar.title}/>
         ))}
       </div>
     );
