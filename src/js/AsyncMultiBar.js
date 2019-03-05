@@ -15,17 +15,17 @@ class AsyncMultiBar extends Component {
     };
   }
 
-  componentDidMount = () =>{
+  componentDidMount(){
     this.getData();
   }
 
   //hide the loading spinner
-  hideLoader = () => {
+  hideLoader(){
     this.setState({ loading: false });
   }
 
   //show the loading spinner
-  showLoader = () => {
+  showLoader(){
     this.setState({ loading: true });
   }
 
