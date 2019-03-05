@@ -1,0 +1,77 @@
+//parent container
+.singlebar{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+//progress bar
+.singlebar-bar{
+  margin-top: 10px;
+  width: 100%;
+  height: 40px;
+  .left, .right{
+    height: 100%;
+    display: inline-block;
+    width: auto;
+    position: relative;
+    box-sizing: border-box;
+    .value{
+      position: absolute; 
+      left:0;
+      bottom:0;
+      font-weight: 600;
+      padding: 3px;
+    }
+  }
+}
+
+//title
+.singlebar-title{
+  display: inline;
+}
+
+//progress bar total units
+.singlebar-total{
+  float: right;
+}
+
+//container for showing summary info
+.summary{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #d6f3ff;
+  padding: 10px;
+  font-size: 14px;
+
+  h4{
+    margin: 0;
+  }
+  .title{
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+  }
+  .content{
+    margin-left: 15px;
+    margin-top: 5px;
+  }
+}
+
+//loading spinner for use in MultiBar
+.loader {
+  border: 16px solid #f3f3f3; 
+  border-top: 16px solid #3498db; 
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
