@@ -39,7 +39,13 @@ class AsyncMultiBar extends Component {
 
   //parse values from API response and update state
   updateValues(data){
-    let values = data.map((obj) => ({title: obj.name, left:{value: (obj.complete) ? obj.complete : obj.high_prio, color: '#1bd60a'}, right:{value: (obj.incomplete) ? obj.incomplete : obj.low_prio, color: '#dd1900'} }));
+    let values = data.map((obj) => (
+      {
+        title: obj.name, 
+        left:{value: (obj.complete) ? obj.complete : obj.high_prio, color: '#1bd60a'}, 
+        right:{value: (obj.incomplete) ? obj.incomplete : obj.low_prio, color: '#dd1900'} 
+      }
+    ));
     this.setState({values: values});
   }
   
