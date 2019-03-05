@@ -1,1 +1,5 @@
-Vacasa-ProgressBars
+To run:
+
+npm-install
+
+npm start
